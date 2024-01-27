@@ -1,20 +1,53 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      colors: {
+        "black-1": "#1a202c",
+        primary: "#5FBDFF",
+        dark: {
+          bg: "#000000",
+          text: "#FFFFFF",
+          primary: "#27B5E2",
+          secondary: "#1A97BF",
+        },
+        light: {
+          bg: "#E6E6E6",
+          text: "#000000",
+          primary: "#D56C6C",
+          secondary: "#EE1B1B",
+        },
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+    container: {
+      // you can configure the container to be centered
+      center: true,
+
+      // or have default horizontal padding
+      padding: "1rem",
+
+      // default breakpoints but with 40px removed
+      screens: {
+        // sm: "600px",
+        // md: "728px",
+        // lg: "584px",
+        // xl: "740px",
+        "2xl": "768px",
       },
     },
   },
   plugins: [],
-}
-export default config
+  darkMode: "class",
+};
+export default config;
