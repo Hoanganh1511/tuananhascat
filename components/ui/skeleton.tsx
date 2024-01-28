@@ -9,7 +9,7 @@ const Skeleton = ({ className, cols, rows, ...props }: SkeletonProps) => {
   return (
     <div
       className={cn(
-        "animate-pulse rounded-md bg-[rgba(255,255,255,0.1)]",
+        "animate-pulse rounded-md bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(255,255,255,0.1)]",
         className
       )}
       {...props}

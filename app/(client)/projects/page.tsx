@@ -12,7 +12,7 @@ export default function Projects() {
     <>
       <div className="min-h-screen">
         <Section title="Enterprise Projects">
-          <div className="grid grid-cols-2 gap-[25px]">
+          <div className="grid grid-cols-4 gap-[25px]">
             <Card
               desc="An NFT Marketplace about Physical Art. NFT allows artists to exhibit their artworks and reach millions of art lovers in all countries around the world"
               title="Avatar Art"
@@ -49,10 +49,77 @@ export default function Projects() {
         </Section>
         <br />
         <Section title="Personal Projects">
-          <div className="grid grid-cols-2 gap-[25px]"></div>
+          <div className="grid grid-cols-4 gap-[25px]">
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+          </div>
         </Section>
+        <br />
         <Section title="Animation Projects">
-          <div className="grid grid-cols-2 gap-[25px]"></div>
+          <div className="grid grid-cols-4 gap-[25px]">
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+            <Card
+              desc="Duyên dáng ngoại thương, Hoa hậu hoàn vũ, MC Nhí"
+              title="BVote"
+              imageUrl={
+                "https://bvote.vn/_next/image?url=%2Fimages%2Fmeeting%2FbannerImg.png&w=3840&q=75"
+              }
+              url="https://bvote.vn/"
+            />
+          </div>
         </Section>
       </div>
     </>

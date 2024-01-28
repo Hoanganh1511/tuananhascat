@@ -52,8 +52,17 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         prefetch={true}
         onClick={onRoute(href)}
         className={`${
-          pathname === href ? "bg-primary " : ""
-        } text-[#1a202c] text-[14px] dark:text-white px-[8px] py-[6px] relative hover:underline`}
+          pathname === href
+            ? `font-bold after:absolute after:bottom-[2px] after:left-[50%] after:w-[60%] after:-translate-x-[60%] after:h-[2px] after:bg-primary
+            before:absolute before:-bottom-[2px] before:left-[50%] before:w-[60%] before:-translate-x-[40%] before:h-[2px] before:bg-primary
+            `
+            : ""
+        } 
+        
+        text-[#1a202c] text-[15px] dark:text-white px-[8px] py-[6px] relative hover:underline
+        
+        
+        `}
         {...props}
       >
         {children}
@@ -62,8 +71,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   };
   return (
     <>
-      <div className="sticky top-0 left-0 w-full z-10  backdrop-blur-sm ">
-        <div className="flex justify-between align-center py-[12px]">
+      <div className="fixed top-0 left-0 w-full z-10  backdrop-blur-sm ">
+        <div className="flex max-w-[1320px] mx-auto justify-between items-center h-[100px]">
           <div className="flex items-center">
             <Link href="" scroll={true} onClick={onRoute("/")}>
               <Logo />
@@ -71,6 +80,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
             <div className="hidden md:flex items-center gap-[12px] ml-[32px]">
               <LinkItem href="/projects">Projects</LinkItem>
               <LinkItem href="/post">Posts</LinkItem>
+              {/* <LinkItem href="/post">Gallery</LinkItem> */}
             </div>
           </div>
           <ThemeToggleButton />
@@ -80,7 +90,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         initial={{ opacity: 0, x: 0, y: 20 }}
         animate={controls}
         variants={variants}
-        className="mt-[40px]"
+        className="pt-[120px]"
         transition={{ duration: 0.42, type: "easeInOut" }}
       >
         {children}

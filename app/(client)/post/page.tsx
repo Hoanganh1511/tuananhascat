@@ -34,9 +34,7 @@ const PostPage: React.FC = () => {
   const paramsSanity = {
     tagSlug: isFilter,
   };
-  useEffect(() => {
-    postsMutate();
-  }, [isFilter]);
+
   const {
     data: posts,
     error: postsError,
@@ -53,29 +51,40 @@ const PostPage: React.FC = () => {
       dedupingInterval: 3_600_000, // dont duplicate a request w/ same key for 1hr
     }
   );
+  useEffect(() => {
+    postsMutate();
+  }, [isFilter, postsMutate]);
   const { data: tags } = useSWR(groq`${tagsQuery}`, (query) =>
     client.fetch(query)
   );
   return (
     <>
       <div className=" relative">
-        <Filter data={tags} valueKey="tagSlug" />
+        {/* <Filter data={tags} valueKey="tagSlug" /> */}
         <div>
           <Section title="Posts">
-            <div className="grid grid-cols-2 gap-x-[12px] gap-y-[20px]">
+            <div className="grid grid-cols-4 gap-x-[40px] gap-y-[60px] py-[30px]  border-black/10 overflow-hidden">
               {postsLoading ? (
                 <>
                   <Skeleton className="w-full h-[160px] rounded-md" />
                   <Skeleton className="w-full h-[160px] rounded-md" />
                   <Skeleton className="w-full h-[160px] rounded-md" />
                   <Skeleton className="w-full h-[160px] rounded-md" />
+                  <Skeleton className="w-full h-[160px] rounded-md" />
+                  <Skeleton className="w-full h-[160px] rounded-md" />
+                  <Skeleton className="w-full h-[160px] rounded-md" />
+                  <Skeleton className="w-full h-[160px] rounded-md" />
                 </>
-              ) : posts && posts.length > 0 ? (
-                posts.map((post: Post) => {
-                  return <PostComponent key={post._id} post={post} />;
-                })
+              ) : posts ? (
+                posts.length > 0 ? (
+                  posts.map((post: Post) => {
+                    return <PostComponent key={post._id} post={post} />;
+                  })
+                ) : (
+                  "Không có bài viết nào"
+                )
               ) : (
-                "Không có bài viết nào"
+                <></>
               )}
             </div>
           </Section>

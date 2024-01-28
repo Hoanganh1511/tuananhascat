@@ -43,7 +43,9 @@ const PostPage: React.FC<PostDetailPageProps> = async ({
           <p>Ngày đăng: {formatDate(post.publishedAt)}</p>
         </div>
         <div className="mt-[20px]">
-          <PortableText value={post.body} components={RichTextComponent} />
+          {post.body && (
+            <PortableText value={post.body} components={RichTextComponent} />
+          )}
         </div>
       </div>
     </>

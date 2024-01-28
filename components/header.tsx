@@ -38,6 +38,7 @@ const Header = () => {
             <div className="hidden md:flex items-center gap-[18px] ml-[32px]">
               <LinkItem href="/projects">Projects</LinkItem>
               <LinkItem href="/post">Posts</LinkItem>
+              <LinkItem href="/post">Gallery</LinkItem>
             </div>
           </div>
           <div className="hidden md:block">

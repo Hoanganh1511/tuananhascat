@@ -7,11 +7,11 @@ const Logo = () => {
     <div>
       <div className="flex items-center">
         <FootIcon
-          width={24}
-          height={24}
+          width={34}
+          height={34}
           className="fill-black dark:fill-white"
         />
-        <h1 className="ml-[4px] text-[15px] font-bold">Takuya Tuananh</h1>
+        <h1 className="ml-[4px] text-[26px] font-bold">Takuya Tuananh</h1>
       </div>
     </div>
   );

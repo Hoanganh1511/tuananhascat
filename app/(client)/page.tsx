@@ -2,12 +2,11 @@ import Image from "next/image";
 import WorkspaceImage from "@/public/workspace.svg";
 import AvatarImage from "@/public/avatar.jpg";
 import Section from "@/components/section";
-import Layout from "@/components/layouts/MainLayout";
 import BioSection, { BioYear } from "@/components/bio-section";
 import { FaGithub, FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import Link from "next/link";
 import Button from "@/components/button";
-// import AntdIcon from "skills/antd.svg";
+
 export default function Home() {
   return (
     <>
@@ -48,7 +47,7 @@ export default function Home() {
             thinking to every project I work on. I look forward to the
             opportunity to bring my skills and passion to your next project.
           </p>
-          <Link href="/projects">
+          <Link scroll={true} href="/projects" className="block w-fit mx-auto">
             <Button className="mt-[12px] mx-auto">My Projects</Button>
           </Link>
         </Section>
@@ -69,7 +68,7 @@ export default function Home() {
               href="https://bytesoft.vn/"
               className="font-medium text-[#5FBDFF]"
             >
-              Bytesoft! Viet Nam
+              Bytesoft Viet Nam
             </Link>
           </BioSection>
           <BioSection>
@@ -200,10 +199,10 @@ export default function Home() {
         <Section title="On the web" isUnderline>
           <ul className="">
             <li className="">
-              <Link href="https://www.facebook.com/jm.1511/" target="_blank">
+              <Link href={"/Web_Developer_Hoang_Tuan_Anh.docx"} target="_blank">
                 <div className="inline-flex items-center rounded-[4px] text-[#2c7a7b] font-medium py-[8px] px-[15px] hover:bg-[#BEFFF7]/80 duration-150">
                   <FaFacebook />
-                  <p className="ml-[6px]">jm1511</p>
+                  <p className="ml-[6px]">Resume</p>
                 </div>
               </Link>
             </li>

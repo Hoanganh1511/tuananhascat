@@ -41,15 +41,15 @@ const RichTextComponent = {
       </h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="text-4xl py-8 font-bold dark:text-white/90">{children}</h2>
+      <h2 className="text-3xl py-8 font-bold dark:text-white/90">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-3xl pb-5 pt-10 font-bold dark:text-white/90">
+      <h3 className="text-2xl pb-5 pt-10 font-bold dark:text-white/90">
         {children}
       </h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="text-2xl py-4 font-bold text-black/80 dark:text-white/90">
+      <h4 className="text-xl py-4 font-bold text-black/80 dark:text-white/90">
         {children}
       </h4>
     ),
@@ -59,7 +59,7 @@ const RichTextComponent = {
       </blockquote>
     ),
     normal: ({ children }: any) => (
-      <p className="text-[15px] dark:text-white/90 leading-[35px]">
+      <p className="text-[17px] dark:text-white/90 leading-[35px]">
         {children}
       </p>
     ),

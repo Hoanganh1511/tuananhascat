@@ -18,29 +18,24 @@ const ThemeToggleButton = () => {
   const toggleSwitch = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
-    <div onClick={toggleSwitch}>
-      <motion.div layout>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            className={`w-[40px] h-[40px] rounded-[8px] flex items-center justify-center cursor-pointer  
+    <motion.div
+      onClick={toggleSwitch}
+      className={`w-[40px] h-[40px] rounded-[8px] flex items-center justify-center cursor-pointer  
             duration-90 hover:brightness-90 ${
               theme === "dark" ? "bg-[#4E31AA]" : "bg-[#E96479]"
             }`}
-            key={theme === "dark" ? "moon" : "sun"}
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 20, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            {theme === "dark" ? (
-              <IoMdMoon size={22} className="text-white" />
-            ) : (
-              <MdOutlineWbSunny size={22} className="text-white" />
-            )}
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
-    </div>
+      key={theme === "dark" ? "moon" : "sun"}
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 20, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
+      {theme === "dark" ? (
+        <IoMdMoon size={22} className="text-white" />
+      ) : (
+        <MdOutlineWbSunny size={22} className="text-white" />
+      )}
+    </motion.div>
   );
 };
 
