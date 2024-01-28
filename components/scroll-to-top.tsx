@@ -15,10 +15,10 @@ const ScrollToTopButton = () => {
   };
   useEffect(() => {
     //add eventlistener to window
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll);
     // remove event on unmount to prevent a memory leak with the cleanup
     return () => {
-      window.removeEventListener("scroll", onScroll, { passive: true });
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
   return (
